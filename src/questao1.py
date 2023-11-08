@@ -16,10 +16,10 @@ y = [3.62, 7.27, 2.66, 1.53, 4.91, 10.36, 5.26, 6.09, 6.57, 4.24,
 print("A média da variável X é", numpy.mean(x))
 print("A média da variável Y é", numpy.mean(y).round(4))
 #moda
-print("A moda da variável X é, calculada pelo programa é", *stats.mode(x).mode,
+print("A moda da variável X, calculada pelo programa é", *stats.mode(x).mode,
       "que ocorre um total de", *stats.mode(x).count, "vez, o que torna a amostra" +
-      "observada amodal")
-print("A moda da variável Y é, calculada pelo programa é", *stats.mode(y).mode,
+      " observada amodal")
+print("A moda da variável Y, calculada pelo programa é", *stats.mode(y).mode,
       "que ocorre um total de", *stats.mode(y).count, "vez, o que torna a amostra" +
       " observada amodal")
 #mediana
@@ -32,22 +32,19 @@ print("A variância da variável Y é de", stats.variation(y))
 print("O desvio padrão da variável X é de", numpy.std(x))
 print("O desvio padrão da variável Y é de", numpy.std(y))
 #coeficiente de correlação
+print("O coeficiente de correlação linear entre as variáveis X e Y é de", numpy.corrcoef(x, y)[0, 1])
 
 #REPRESENTAÇÃO GRÁFICA
-
 #histograma
-
 plt.hist(x, edgecolor="black")
 plt.show()
 plt.hist(y, edgecolor="black")
 plt.show()
-
 #box-plot
 plt.boxplot(x)
 plt.show()
 plt.boxplot(y)
 plt.show()
-
 #gráfico de dispersão
 plt.plot(x, y, 'o')
 plt.show()
